@@ -1,0 +1,19 @@
+﻿@model SaveCustomerViewModel
+
+
+
+<h3 class="alert alert-success">Müşteri Ekle</h3>
+    <form asp-controller="Customer" asp-action="SaveCustomer">
+       ID: <input asp-for="Customer.id"/><br />
+        Ad: <input asp-for="Customer.FirstName" /><br />
+        Soyad: <input asp-for="Customer.LastName" /><br />
+        Şehir: <select asp-for="Customer.City" asp-items="Model.Cities"></select><br />
+        <button type="submit"></button>
+    </form>
+    @section Scripts{
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    }
+

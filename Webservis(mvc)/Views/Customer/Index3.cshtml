@@ -1,0 +1,29 @@
+﻿@model CustomerListViewModel//List<Webservis_mvc_.Entites.Customer>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index3</title>
+</head>
+<body>
+    <table>
+        @foreach(var customer in Model.Customers){
+            <tr>
+
+              
+                <td>@customer.id</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.LastName</td>
+                <td>@customer.City</td>
+              
+            </tr>
+        }
+    </table>
+</body>
+</html>
